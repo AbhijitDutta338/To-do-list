@@ -1,21 +1,14 @@
 import React from "react";
 
 function ToDoItem(props) {
-  const [isline, setisline] = React.useState(false);
-  function line() {
-    setisline((prevValue) => {
-      return !prevValue;
-    });
-  }
   return (
-    <li
-      onClick={line}
-      style={{
-        textDecoration: isline && "line-through"
+    <div
+      onClick={() => {
+        props.onChecked(props.id);
       }}
     >
-      {props.text}
-    </li>
+      <li>{props.text}</li>
+    </div>
   );
 }
 
