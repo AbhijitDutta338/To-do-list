@@ -28,9 +28,9 @@ function App() {
       </div>
       <div>
         <ul>
-          {items.map((item) => {
-            return <li>{item}</li>;
-          })}
+          {items.map((todoItem) => (
+            <ToDoItem text={todoItem} />
+          ))}
         </ul>
       </div>
     </div>
